@@ -99,10 +99,7 @@
 
           function handleVisibilityChange() {
               if (document.hidden) {
-                  MuteAudio();
-              }
-              else {
-                  UnMuteAudio();
+                  unityInstance.SendMessage("Data Manager", "ForceDisconnect");
               }
           }
 
